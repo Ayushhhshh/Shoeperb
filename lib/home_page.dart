@@ -5,10 +5,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.black,
-      title: Text("Shoeperb", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
-      ),
+    return const Scaffold(
+      
     );
   }
 }
