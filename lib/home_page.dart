@@ -5,8 +5,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder(
-    
+    return Scaffold(
+      appBar: AppBar(backgroundColor: Colors.black,
+      title: Text("Shoeperb", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),),
+      ),
     );
   }
 }
