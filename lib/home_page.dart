@@ -13,11 +13,14 @@ class HomePage extends StatelessWidget {
             Row(
               children: [Padding(
                 padding: EdgeInsets.all(20.0),
-                child: Text("Shoes\nCollection", style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, fontSize: 35),),
+                child: Text("Shoes\nCollection", style: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.bold, fontSize: 33),),
               ),
               Expanded(child: 
               TextField(
-                
+                decoration: InputDecoration(
+                  hintText: 'Search',
+                  prefixIcon: Icon(Icons.search)
+                ),
               ),
               )
             ]),
