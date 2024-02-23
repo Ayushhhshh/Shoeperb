@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
                 decoration: InputDecoration(
                   hintText: 'Search',
                   prefixIcon: Icon(Icons.search),
-                  border: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey),borderRadius: BorderRadius.horizontal(left: Radius.circular(50)))
+                  focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey),borderRadius: BorderRadius.horizontal(left: Radius.circular(50))),
                 ),
               ),
               )
