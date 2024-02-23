@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Shoeperb',
       theme: ThemeData(
+        useMaterial3: true,
         inputDecorationTheme: const InputDecorationTheme(
           hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.w700,fontSize: 16)
         )
