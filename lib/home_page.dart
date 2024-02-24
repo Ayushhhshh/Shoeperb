@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.grey),
-      borderRadius:BorderRadius.horizontal(left: Radius.circular(50))
+      borderRadius:BorderRadius.horizontal(left: Radius.circular(50),)
       );
     return  Scaffold(
       body: SafeArea(
