@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -82,7 +84,16 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-    );
+  bottomNavigationBar: CurvedNavigationBar(
+    backgroundColor: Colors.white,
+    color: Colors.black87,
+    
+    items:const [
+    Icon(Icons.home, color: Colors.white,),
+    Icon(Icons.shopping_cart, color: Colors.white,),
+    Icon(Icons.settings, color: Colors.white,),
+    ]),
+   );
   }
 }
 
