@@ -87,7 +87,6 @@ class _HomePageState extends State<HomePage> {
   bottomNavigationBar: CurvedNavigationBar(
     backgroundColor: Colors.white,
     color: Colors.black87,
-    
     items:const [
     Icon(Icons.home, color: Colors.white,),
     Icon(Icons.shopping_cart, color: Colors.white,),

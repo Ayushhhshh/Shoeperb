@@ -5,7 +5,7 @@ final products = [
     'price': 44.52,
     'imageUrl': 'assets/images/shoe_1.jpeg',
     'company': 'Nike',
-    'sizes': [9, 10, 11, 12],
+    'sizes': [6, 7, 8, 9],
   },
   {
     'id': '1',
@@ -13,7 +13,7 @@ final products = [
     'price': 20.12,
     'imageUrl': 'assets/images/shoe_2.jpeg',
     'company': 'Addidas',
-    'sizes': [9, 10, 12],
+    'sizes': [7, 8, 9],
   },
   {
     'id': '2',
@@ -21,7 +21,7 @@ final products = [
     'price': 28.95,
     'imageUrl': 'assets/images/shoe_3.jpeg',
     'company': 'Bata',
-    'sizes': [8, 9, 10],
+    'sizes': [7, 8, 9],
   },
   {
     'id': '3',
@@ -29,6 +29,6 @@ final products = [
     'price': 420.69,
     'imageUrl': 'assets/images/shoe_4.jpeg',
     'company': 'Nike',
-    'sizes': [8, 9, 10],
+    'sizes': [7, 8, 9],
   },
 ];
