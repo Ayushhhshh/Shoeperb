@@ -1,3 +1,5 @@
+import 'package:e_commerce/global_var.dart';
+import 'package:e_commerce/products_cards.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -80,6 +82,15 @@ class _HomePageState extends State<HomePage> {
                   );
                 },
               ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: products.length,
+                itemBuilder: (context,index){
+                  final product = products[index];
+                  return const ProductCard(title: 'Shoe') ;
+                }, 
+                ),
             ),
           ],
         ),
