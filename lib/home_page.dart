@@ -1,8 +1,8 @@
 import 'package:e_commerce/global_var.dart';
 import 'package:e_commerce/products_cards.dart';
-import 'package:flutter/cupertino.dart';
+// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+// import 'package:flutter/widgets.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 
