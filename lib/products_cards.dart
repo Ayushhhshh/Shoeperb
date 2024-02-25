@@ -14,15 +14,23 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: const Color.fromRGBO(216, 240, 253, 1),
-      child: Column(
-        children: [
-          Text(title, style: const TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight: FontWeight.bold),),
-          const SizedBox(height: 5,),
-          Text("\$$price", style: const TextStyle(fontFamily: "Lato", fontSize: 15),),
-          Image.asset(image, height: 375,)   
-        ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+        margin: const EdgeInsets.all(20),
+        color: const Color.fromRGBO(216, 240, 253, 1),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(title, style: const TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight: FontWeight.bold),),
+              const SizedBox(height: 5,),
+              Text("\$$price", style: const TextStyle(fontFamily: "Lato", fontSize: 16),),
+              Center(child: Image.asset(image, height: 375,))   
+            ],
+          ),
+        ),
       ),
     );
   }
