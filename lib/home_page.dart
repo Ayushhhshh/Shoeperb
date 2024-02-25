@@ -88,7 +88,11 @@ class _HomePageState extends State<HomePage> {
                 itemCount: products.length,
                 itemBuilder: (context,index){
                   final product = products[index];
-                  return const ProductCard(title: 'Shoe', price: 24,);
+                  return  ProductCard(
+                    title: product['title'] as String,
+                     price: product['price'] as double,
+                     image: product['imageUrl'] as String,
+                     );
                 }, 
                 ),
             ),
