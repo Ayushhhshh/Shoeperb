@@ -16,7 +16,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),       
-      color: const Color.fromRGBO(216, 240, 253, 1),),
+      color: Colors.amber,),
       margin: const EdgeInsets.all(20),
       padding: const EdgeInsets.all(16),
       child: Column(
@@ -25,7 +25,7 @@ class ProductCard extends StatelessWidget {
           Text(title, style: const TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight: FontWeight.bold),),
           const SizedBox(height: 5,),
           Text("\$$price", style: const TextStyle(fontFamily: "Lato", fontSize: 16),),
-          Center(child: Image.asset(image, height: 170)),   
+          Center(child: Image.asset(image, height: 180)),   
         ],
       ),
     );
