@@ -18,9 +18,9 @@ class ProductCard extends StatelessWidget {
       color: const Color.fromRGBO(216, 240, 253, 1),
       child: Column(
         children: [
-          Text(title),
+          Text(title, style: const TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight: FontWeight.bold),),
           const SizedBox(height: 5,),
-          Text("\$$price"),
+          Text("\$$price", style: const TextStyle(fontFamily: "Lato", fontSize: 15),),
           Image.asset(image, height: 375,)   
         ],
       ),
