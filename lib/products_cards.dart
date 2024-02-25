@@ -25,7 +25,7 @@ class ProductCard extends StatelessWidget {
           Text(title, style: const TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight: FontWeight.bold),),
           const SizedBox(height: 5,),
           Text("\$$price", style: const TextStyle(fontFamily: "Lato", fontSize: 16),),
-          Center(child: Image.asset(image, height: 200)),   
+          Center(child: Image.asset(image, height: 170)),   
         ],
       ),
     );
