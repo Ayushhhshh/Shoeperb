@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 
 class ProductDetail extends StatelessWidget {
   final Map<String, Object> product;
-  const ProductDetail({super.key, required this.product});
+  // final String image;
+  const ProductDetail({super.key, required this.product
+  // required this.image
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +16,8 @@ class ProductDetail extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Center(child: Text(product['title'] as String, style: TextStyle(fontFamily: "Lato", fontSize: 30, fontWeight: FontWeight.bold),))
+          Center(child: Text(product['title'] as String, style: TextStyle(fontFamily: "Lato", fontSize: 30 , fontWeight: FontWeight.bold),)),
+          // Image.asset(image)
         ],
       ),
     );
