@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
       // ProductDetail(
       //   product: products[0]
       //   ),
-    // 
+    
    );
   }
 }
