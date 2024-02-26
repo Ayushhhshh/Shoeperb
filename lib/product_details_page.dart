@@ -1,4 +1,8 @@
+import 'dart:ffi';
+
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class ProductDetail extends StatelessWidget {
   final Map<String, Object> product;
@@ -30,11 +34,32 @@ class ProductDetail extends StatelessWidget {
           const Spacer(flex: 2,),
           Container(
             height: 250,
+            width: 1000,
             decoration:
              BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color:  Colors.black87),
-            ),
+              child : Column(children: [
+                const SizedBox(height: 36,),
+                Text("\$${product['price']}", style: const TextStyle(fontFamily: "Lato", color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
+                SizedBox(
+                  height: 80,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: (product['sizes'] as List<int>).length,
+                    itemBuilder: (context,index) {
+                      final size = (product['sizes'] as List<int>)[index];
+                      return Chip(
+                        label: Text(size.toString()));
+                    } ),
+                ),
+                ElevatedButton(
+                onPressed: (){}, 
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.black,),
+                child:const Text("Add To Cart"))
+
+            ],)
+          ),
         ],
       ),
     );
