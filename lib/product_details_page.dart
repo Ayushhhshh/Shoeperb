@@ -1,9 +1,8 @@
-import 'dart:ffi';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class ProductDetail extends StatelessWidget {
+class ProductDetail extends StatefulWidget {
   final Map<String, Object> product;
   // final String image;
   const ProductDetail({super.key,
@@ -11,6 +10,12 @@ class ProductDetail extends StatelessWidget {
   // required this.image
   });
 
+  @override
+  State<ProductDetail> createState() => _ProductDetailState();
+}
+
+class _ProductDetailState extends State<ProductDetail> {
+  int selectedSize = 0;
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -23,12 +28,13 @@ class ProductDetail extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children:[
-          Center(child: Text(product['title'] as String, style: const TextStyle(fontFamily: "Lato", fontSize: 30 , fontWeight: FontWeight.bold),)),
+          Text(widget.product['title'] as String, style: const TextStyle(fontFamily: "Lato", fontSize: 30 , fontWeight: FontWeight.bold),),
           const Spacer(),
           Padding(
             padding: const EdgeInsets.all(16.0),
-            child: Image.asset(product['imageUrl'] as String),
+            child: Image.asset(widget.product['imageUrl'] as String),
           ),
           const Spacer(flex: 2,),
           Container(
@@ -40,22 +46,41 @@ class ProductDetail extends StatelessWidget {
               color:  Colors.black87),
               child : Column(children: [
                 const SizedBox(height: 36,),
-                Text("\$${product['price']}", style: const TextStyle(fontFamily: "Lato", color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
+                Text("\$${widget.product['price']}", style: const TextStyle(fontFamily: "Lato", color: Colors.white, fontSize: 35, fontWeight: FontWeight.bold),),
+                const SizedBox(height: 5,),
                 SizedBox(
-                  height: 80,
+                  height: 60,
                   child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    itemCount: (product['sizes'] as List<int>).length,
+                    itemCount: (widget.product['sizes'] as List<int>).length,
                     itemBuilder: (context,index) {
-                      final size = (product['sizes'] as List<int>)[index];
-                      return Chip(
-                        label: Text(size.toString()));
+                      final size = (widget.product['sizes'] as List<int>)[index];
+                      return  Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: GestureDetector(
+                          onTap: (){
+                            setState(() {
+                      selectedSize = size;
+                    });
+                          },
+                          child: Chip(
+                            label: Text(size.toString()),
+                            labelStyle: TextStyle(color: selectedSize == size ? Colors.black : Colors.white,),
+                            backgroundColor: selectedSize == size ? Colors.white : Colors.black,),
+                        ),
+                          
+                      );
                     } ),
                 ),
-                ElevatedButton(
-                onPressed: (){}, 
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.black,),
-                child:const Text("Add To Cart"))
+                Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: ElevatedButton(
+                  onPressed: (){}, 
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor:Colors.black87,
+                    minimumSize: const Size(double.infinity, 50)),
+                  child:const Text("Add To Cart", style: TextStyle(fontSize: 20, color: Colors.white),)),
+                )
 
             ],)
           ),
