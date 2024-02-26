@@ -50,7 +50,7 @@ class _ProductDetailState extends State<ProductDetail> {
               width: 1000,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.black87),
+                  color: Colors.brown),
               child: Column(
                 children: [
                   const SizedBox(

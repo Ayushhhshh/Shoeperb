@@ -17,16 +17,17 @@ class MyApp extends StatelessWidget {
       title: 'Shoeperb',
       color: Colors.white70,
       theme: ThemeData( 
-        scaffoldBackgroundColor: Colors.black87,
+        scaffoldBackgroundColor: Colors.brown,
         useMaterial3: false,
         inputDecorationTheme: const InputDecorationTheme(
           hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.w700,fontSize: 16)
         )
       ),
-      home: const HomePage()
-      // ProductDetail(
-      //   product: products[0]
-      //   ),
-    );
+      home: HomePage()
+    //   ProductDetail(
+    //     product: products[0]
+    //     ),
+    // 
+   );
   }
 }
