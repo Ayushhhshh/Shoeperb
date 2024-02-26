@@ -23,9 +23,10 @@ class MyApp extends StatelessWidget {
           hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.w700,fontSize: 16)
         )
       ),
-      home: ProductDetail(
-        product: products[0]
-        ),
+      home: const HomePage()
+      // ProductDetail(
+      //   product: products[0]
+      //   ),
     );
   }
 }
