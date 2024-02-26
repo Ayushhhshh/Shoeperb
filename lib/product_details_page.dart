@@ -20,22 +20,22 @@ class _ProductDetailState extends State<ProductDetail> {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: const Color.fromARGB(0, 255, 255, 255),
         foregroundColor: Colors.black87,
         leading: const Icon(Icons.arrow_back),
         title: const Text(
           "Details",
-          style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold),
+          style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold,),
         ),
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white70,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             widget.product['title'] as String,
             style: const TextStyle(
-                fontFamily: "Lato", fontSize: 30, fontWeight: FontWeight.bold),
+                fontFamily: "Lato", fontSize: 30, fontWeight: FontWeight.bold,),
           ),
           const Spacer(),
           Padding(
