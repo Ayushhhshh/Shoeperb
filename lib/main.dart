@@ -15,8 +15,10 @@ class MyApp extends StatelessWidget {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Shoeperb',
-      theme: ThemeData(
-        useMaterial3: true,
+      color: Colors.white70,
+      theme: ThemeData( 
+        scaffoldBackgroundColor: Colors.black87,
+        useMaterial3: false,
         inputDecorationTheme: const InputDecorationTheme(
           hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.w700,fontSize: 16)
         )

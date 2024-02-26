@@ -16,7 +16,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),       
-      color: Colors.amber,),
+      color: Colors.white70,),
       margin: const EdgeInsets.all(20),
       padding: const EdgeInsets.all(16),
       child: Column(

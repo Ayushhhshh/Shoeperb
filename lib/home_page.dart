@@ -26,8 +26,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     const border = OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.grey),
-      borderRadius:BorderRadius.horizontal(left: Radius.circular(50),)
+      borderSide: BorderSide(color: Colors.grey,),
+      borderRadius: BorderRadius.horizontal(left: Radius.circular(50),
+      )
       );
     return  Scaffold(
       body: SafeArea(
@@ -41,14 +42,17 @@ class _HomePageState extends State<HomePage> {
                   style: TextStyle(
                       fontFamily: 'Lato',
                       fontWeight: FontWeight.bold,
-                      fontSize: 33),
+                      fontSize: 33,
+                      color: Colors.white70),
                 ),
               ),
                Expanded(
                 child: TextField(
                   decoration: InputDecoration(
+                    focusColor: Colors.white,
                     hintText: 'Search',
-                    prefixIcon: Icon(Icons.search),
+                    hintStyle: TextStyle(color: Colors.grey),
+                    prefixIcon: Icon(Icons.search, color: Colors.white70,),
                     border: border,
                     focusedBorder: border 
                   ),
@@ -73,10 +77,10 @@ class _HomePageState extends State<HomePage> {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30)
                         ),
-                        backgroundColor: clicked == filter ? Colors.amber : const Color.fromRGBO(245, 247, 249, 1),
+                        backgroundColor: clicked == filter ? Colors.white70 : Colors.black87,
                         padding: const EdgeInsets.symmetric(horizontal: 15 , vertical: 15),
                        label:Text(filter),
-                       labelStyle: const TextStyle(fontSize: 15),
+                       labelStyle:  TextStyle(fontSize: 15,  color: clicked == filter ? Colors.black87 : Colors.white70),
                       ),
                     ),
                   );
@@ -100,7 +104,7 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
   bottomNavigationBar: CurvedNavigationBar(
-    backgroundColor: Colors.white,
+    backgroundColor: Colors.grey,
     color: Colors.black,
     items:const [
     Icon(Icons.home, color: Colors.white,),
