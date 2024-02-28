@@ -1,6 +1,4 @@
-import 'package:e_commerce/global_var.dart';
 import 'package:e_commerce/home_page.dart';
-import 'package:e_commerce/product_details_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,7 +21,7 @@ class MyApp extends StatelessWidget {
           hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.w700,fontSize: 16)
         )
       ),
-      home: HomePage()
+      home: const HomePage()
       // ProductDetail(
       //   product: products[0]
       //   ),
