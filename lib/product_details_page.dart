@@ -22,7 +22,7 @@ class _ProductDetailState extends State<ProductDetail> {
         elevation: 0,
         backgroundColor: const Color.fromARGB(0, 255, 255, 255),
         foregroundColor: Colors.black87,
-        leading: const Icon(Icons.arrow_back),
+        leading:IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
         title: const Text(
           "Details",
           style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold,),

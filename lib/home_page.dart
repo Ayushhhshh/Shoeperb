@@ -1,4 +1,5 @@
 import 'package:e_commerce/global_var.dart';
+import 'package:e_commerce/product_details_page.dart';
 import 'package:e_commerce/products_cards.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -94,11 +95,18 @@ class _HomePageState extends State<HomePage> {
                 itemCount: products.length,
                 itemBuilder: (context,index){
                   final product = products[index];
-                  return  ProductCard(
-                    title: product['title'] as String,
-                     price: product['price'] as double,
-                     image: product['imageUrl'] as String,
-                     );
+                  return  GestureDetector(
+                    onTap : () {
+                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                        return ProductDetail(product: product);
+                      }));
+                    },
+                    child: ProductCard(
+                      title: product['title'] as String,
+                       price: product['price'] as double,
+                       image: product['imageUrl'] as String,
+                       ),
+                  );
                 }, 
                 ),
             ),
