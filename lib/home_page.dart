@@ -119,10 +119,9 @@ class _HomePageState extends State<HomePage> {
     items:const [
     Icon(Icons.home, color: Colors.white,),
     Icon(Icons.shopping_cart, color: Colors.white,),
-    Icon(Icons.settings, color: Colors.white,),
     ]),
    );
   }
 }
 
-                                //  18:43:00
+                                     //  18:43:00
