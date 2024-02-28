@@ -1,10 +1,12 @@
 import 'package:e_commerce/global_var.dart';
 import 'package:e_commerce/product_details_page.dart';
 import 'package:e_commerce/products_cards.dart';
+import 'package:flutter/cupertino.dart';
 // import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter/widgets.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter/widgets.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -116,9 +118,13 @@ class _HomePageState extends State<HomePage> {
   bottomNavigationBar: CurvedNavigationBar(
     backgroundColor: Colors.brown,
     color: Colors.black87,
-    items:const [
-    Icon(Icons.home, color: Colors.white,),
-    Icon(Icons.shopping_cart, color: Colors.white,),
+    items: [
+    GestureDetector(
+      onTap: () {},
+      child: const Icon(Icons.home, color: Colors.white,)),
+    GestureDetector(
+      onTap: () {},
+      child: const Icon(Icons.shopping_cart, color: Colors.white,)),
     ]),
    );
   }
