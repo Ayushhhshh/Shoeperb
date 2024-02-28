@@ -1,3 +1,4 @@
+import 'package:e_commerce/home_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -22,7 +23,7 @@ class _ProductDetailState extends State<ProductDetail> {
         elevation: 0,
         backgroundColor: const Color.fromARGB(0, 255, 255, 255),
         foregroundColor: Colors.black87,
-        leading:IconButton(onPressed: () {}, icon: const Icon(Icons.arrow_back)),
+        leading:IconButton(onPressed: () {Navigator.pop(context, MaterialPageRoute(builder: (context) => const HomePage()),);}, icon: const Icon(Icons.arrow_back)),
         title: const Text(
           "Details",
           style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold,),
