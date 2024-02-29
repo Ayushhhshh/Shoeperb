@@ -1,4 +1,3 @@
-import 'package:e_commerce/global_var.dart';
 import 'package:flutter/material.dart';
 
 class CartPage extends StatelessWidget {
@@ -7,9 +6,11 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: ListView.builder(
-        itemCount: cart.length,
-        itemBuilder:(context,index) {})
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.brown,
+        title: const Text("Cart", style: TextStyle(color: Colors.black),),),
+      body: const Center(child: Text("Cart")),
     );
   }
 }
