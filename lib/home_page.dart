@@ -34,8 +34,8 @@ class _HomePageState extends State<HomePage> {
     backgroundColor: Colors.brown,
     color: Colors.black87,
     items: const [
-    Icon(Icons.home, color: Colors.white,),
-    Icon(Icons.shopping_cart, color: Colors.white,),
+    Icon(Icons.home, size: 27,color:  Colors.white),
+    Icon(Icons.shopping_cart, size: 27, color: Colors.white,),
     ]),
    );
   }
