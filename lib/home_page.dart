@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            const Row(children: [
+              const Row(children: [
               Padding(
                 padding: EdgeInsets.all(20.0),
                 child: Text(
@@ -83,7 +83,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.circular(30)
                         ),
                         backgroundColor: clicked == filter ? Colors.white70 : Colors.black87,
-                        padding: const EdgeInsets.symmetric(horizontal: 15 , vertical: 15),
+                        padding:  const EdgeInsets.symmetric(horizontal: 15 , vertical: 15),
                        label:Text(filter),
                        labelStyle:  TextStyle(fontSize: 15,  color: clicked == filter ? Colors.black87 : Colors.white70),
                       ),
@@ -121,10 +121,10 @@ class _HomePageState extends State<HomePage> {
     items: [
     GestureDetector(
       onTap: () {},
-      child: const Icon(Icons.home, color: Colors.white,)),
+      child:  const Icon(Icons.home, color: Colors.white,)),
     GestureDetector(
       onTap: () {},
-      child: const Icon(Icons.shopping_cart, color: Colors.white,)),
+      child:  const Icon(Icons.shopping_cart, color: Colors.white,)),
     ]),
    );
   }
