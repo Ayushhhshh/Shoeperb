@@ -1,12 +1,9 @@
 import 'package:e_commerce/global_var.dart';
 import 'package:e_commerce/product_details_page.dart';
 import 'package:e_commerce/products_cards.dart';
-import 'package:flutter/cupertino.dart';
-// import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter/widgets.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter/widgets.dart';
+
 
 
 class HomePage extends StatefulWidget {
@@ -19,6 +16,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<String> filters = const ['All', 'Adidas', 'Nike', 'Bata'];
   late String clicked ;
+  int currenPage = 0;
 
   @override
   void initState() {
@@ -116,6 +114,11 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
   bottomNavigationBar: CurvedNavigationBar(
+    onTap: (value) {
+      setState(() {
+        currenPage=value;
+      });
+    },
     backgroundColor: Colors.brown,
     color: Colors.black87,
     items: [

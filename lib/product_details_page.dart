@@ -1,7 +1,5 @@
 import 'package:e_commerce/home_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class ProductDetail extends StatefulWidget {
   final Map<String, Object> product;
