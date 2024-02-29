@@ -19,8 +19,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     
     return  Scaffold(
-      body: ProductList(),
-  bottomNavigationBar: CurvedNavigationBar(
+      body: const ProductList(),
+      bottomNavigationBar: CurvedNavigationBar(
     onTap: (value) {
       setState(() {
         currenPage=value;
