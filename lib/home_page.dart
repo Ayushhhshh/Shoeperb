@@ -22,7 +22,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     
     return  Scaffold(
-      body: currentPage == 0 ? const ProductList() : const CartPage(),
+      body: IndexedStack(
+        index: currentPage,
+        children: pages),
       bottomNavigationBar: CurvedNavigationBar(
     onTap: (value) {
       setState(() {
