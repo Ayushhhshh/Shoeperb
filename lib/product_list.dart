@@ -92,11 +92,15 @@ class _MyWidgetState extends State<ProductList> {
                 itemBuilder: (context,index){
                   final product = products[index];
                   return  GestureDetector(
-                    onTap : () {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (context) {
+                    onTap: () {
+                    Duration duration = const Duration(milliseconds: 100);
+                    Future.delayed(duration, () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
                         return ProductDetail(product: product);
                       }));
-                    },
+                    });
+                  },
                     child: ProductCard(
                       title: product['title'] as String,
                        price: product['price'] as double,
