@@ -9,8 +9,11 @@ class CartPage extends StatelessWidget {
       appBar: AppBar(
         // elevation: 0,
         backgroundColor: Colors.brown,
-        title: const Text("Cart", style: TextStyle(color: Colors.black),),),
-      body: const Center(child: Text("Cart")),
+        title:
+        const Text("Cart", style: TextStyle(color: Colors.black),),
+        ),
+      body: const Center(child: Icon(Icons.shopping_cart)),
+      
     );
   }
 }
