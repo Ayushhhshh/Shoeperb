@@ -1,4 +1,3 @@
-import 'package:e_commerce/global_var.dart';
 import 'package:flutter/material.dart';
 
 class CartProvider extends ChangeNotifier{
