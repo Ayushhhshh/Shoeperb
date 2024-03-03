@@ -29,6 +29,7 @@ void ontap() {
         'sizes': selectedSize,
       }
     );
+     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Product Added Successfully"),),);
   }
   else{
     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please Select a particular Size!"),),);
