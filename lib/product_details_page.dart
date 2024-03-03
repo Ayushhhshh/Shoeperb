@@ -16,10 +16,8 @@ class ProductDetail extends StatefulWidget {
 
 class _ProductDetailState extends State<ProductDetail> {
   int selectedSize = 0;
-  
-  @override
-  Widget build(BuildContext context) {
-     onTap() {
+
+void ontap() {
       if (selectedSize != 0){
         Provider.of<CartProvider>(context, listen: false).addProduct(
       {
@@ -32,7 +30,13 @@ class _ProductDetailState extends State<ProductDetail> {
       }
     );
   }
+  else{
+    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text("Please Select a particular Size!"),),);
+  }
 }
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -118,7 +122,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: ElevatedButton.icon(
-                        onPressed: onTap(),
+                        onPressed: ontap,
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black87,
                             minimumSize: const Size(double.infinity, 50)),
