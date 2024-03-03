@@ -1,5 +1,7 @@
+import 'package:e_commerce/cart_provider.dart';
 import 'package:e_commerce/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ProductDetail extends StatefulWidget {
   final Map<String, Object> product;
@@ -14,8 +16,23 @@ class ProductDetail extends StatefulWidget {
 
 class _ProductDetailState extends State<ProductDetail> {
   int selectedSize = 0;
+  
   @override
   Widget build(BuildContext context) {
+     onTap() {
+      if (selectedSize != 0){
+        Provider.of<CartProvider>(context, listen: false).addProduct(
+      {
+        'id': widget.product['id'],
+        'title': widget.product['title'],
+        'price': widget.product['price'],
+        'imageUrl': widget.product['imageUrl'],
+        'company': widget.product['company'],
+        'sizes': selectedSize,
+      }
+    );
+  }
+}
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -101,7 +118,7 @@ class _ProductDetailState extends State<ProductDetail> {
                   Padding(
                     padding: const EdgeInsets.all(20.0),
                     child: ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: onTap(),
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black87,
                             minimumSize: const Size(double.infinity, 50)),
