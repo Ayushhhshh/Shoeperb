@@ -13,17 +13,7 @@ class CartPage extends StatelessWidget {
         title:
         const Text("Cart", style: TextStyle(color: Colors.black),),
         ),
-      body: 
-      // const Center(child: Text("Cart", style: TextStyle(fontSize: 25, fontFamily: "Lato", fontWeight: FontWeight.bold),)),
-      const Card(
-        shape: RoundedRectangleBorder(
-        ),
-        color: Colors.black87,
-        child: Padding(
-          padding: EdgeInsets.all(8.0),
-          child: Text("Ayush", style:TextStyle(color: Colors.white),),
-        ),
-      )
+        body: const Center(child: Text("Cart", style: TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold, fontSize: 25),)),
     );
   }
 }
