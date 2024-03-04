@@ -1,7 +1,5 @@
 import 'package:e_commerce/global_var.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-// import 'package:flutter/widgets.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
@@ -21,7 +19,7 @@ class CartPage extends StatelessWidget {
             final cartItem = cart[index];
             return  ListTile(
               leading: CircleAvatar(backgroundImage: AssetImage(cartItem['imageUrl'].toString()),
-              backgroundColor: const Color.fromARGB(255, 73, 52, 46),
+              backgroundColor: const Color.fromARGB(255, 74, 49, 42),
               radius: 25,
               ),
               trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.delete_forever, color: Colors.white,)),
