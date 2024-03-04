@@ -20,6 +20,11 @@ class CartPage extends StatelessWidget {
           itemBuilder: (context,index){
             final cartItem = cart[index];
             return  ListTile(
+              leading: CircleAvatar(backgroundImage: AssetImage(cartItem['imageUrl'].toString()),
+              backgroundColor: const Color.fromARGB(255, 73, 52, 46),
+              radius: 25,
+              ),
+              trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.delete_forever, color: Colors.white,)),
               title: Text(cartItem['title'].toString(), style: const TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold),),
                subtitle: Text("Size: ${cartItem['sizes'].toString()}"),
             );
