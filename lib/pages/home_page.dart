@@ -1,5 +1,5 @@
-import 'package:e_commerce/cart_page.dart';
-import 'package:e_commerce/product_list.dart';
+import 'package:e_commerce/pages/cart_page.dart';
+import 'package:e_commerce/pages/product_list.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
