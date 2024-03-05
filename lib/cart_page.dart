@@ -15,7 +15,7 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.brown,
         title:
         const Text("Cart", style: TextStyle(color: Colors.black),),
-        ),
+        ), 
         body: ListView.builder(
           itemCount: cart.length,
           itemBuilder: (context,index){
