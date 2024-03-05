@@ -37,7 +37,9 @@ class CartPage extends StatelessWidget {
                   content: const Text("Are you sure you want to remove the product from the cart?"),
                   actions: [
                     TextButton(onPressed: () {}, child: const Text("Yes", style: TextStyle(color: Colors.black),)),
-                    TextButton(onPressed: () {}, child: const Text("No", style: TextStyle(color: Colors.black),)),
+                    TextButton(onPressed: () {
+                      Navigator.of(context).pop();
+                    }, child: const Text("No", style: TextStyle(color: Colors.black),)),
                   ],
                   );
                 }); 
