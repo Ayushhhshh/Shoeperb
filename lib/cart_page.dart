@@ -1,7 +1,7 @@
 import 'package:e_commerce/cart_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
+ 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
 
@@ -25,7 +25,11 @@ class CartPage extends StatelessWidget {
               backgroundColor: const Color.fromARGB(255, 74, 49, 42),
               radius: 25,
               ),
-              trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.delete, color: Colors.white,)),
+              trailing: IconButton(onPressed: () {
+                showDialog(context: context, builder: (context){
+                  return const AlertDialog(title: Text("Are you sure", style: TextStyle(fontFamily: "Lato", fontSize: 17),),);
+                }); 
+              }, icon: const Icon(Icons.delete, color: Colors.white,)),
               title: Text(cartItem['title'].toString(), style: const TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold),),
                subtitle: Text("Size: ${cartItem['sizes'].toString()}"),
             );
