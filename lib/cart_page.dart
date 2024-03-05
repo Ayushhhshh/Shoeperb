@@ -26,8 +26,15 @@ class CartPage extends StatelessWidget {
               radius: 25,
               ),
               trailing: IconButton(onPressed: () {
-                showDialog(context: context, builder: (context){
-                  return const AlertDialog(title: Text("Are you sure", style: TextStyle(fontFamily: "Lato", fontSize: 17),),);
+                showDialog(
+                  context: context, builder: (context){
+                  return AlertDialog(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    backgroundColor: (const Color.fromARGB(255, 193, 170, 163)),
+                    title: const Text("Delete Product", style: TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight:FontWeight.bold ),),
+                  content: const Text("Are you sure you want to remove the product from the cart?"),);
                 }); 
               }, icon: const Icon(Icons.delete, color: Colors.white,)),
               title: Text(cartItem['title'].toString(), style: const TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold),),
