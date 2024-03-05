@@ -25,7 +25,7 @@ class CartPage extends StatelessWidget {
               backgroundColor: const Color.fromARGB(255, 74, 49, 42),
               radius: 25,
               ),
-              trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.delete_forever, color: Colors.white,)),
+              trailing: IconButton(onPressed: () {}, icon: const Icon(Icons.delete, color: Colors.white,)),
               title: Text(cartItem['title'].toString(), style: const TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold),),
                subtitle: Text("Size: ${cartItem['sizes'].toString()}"),
             );
