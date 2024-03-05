@@ -34,7 +34,12 @@ class CartPage extends StatelessWidget {
                     ),
                     backgroundColor: (const Color.fromARGB(255, 193, 170, 163)),
                     title: const Text("Delete Product", style: TextStyle(fontFamily: "Lato", fontSize: 20, fontWeight:FontWeight.bold ),),
-                  content: const Text("Are you sure you want to remove the product from the cart?"),);
+                  content: const Text("Are you sure you want to remove the product from the cart?"),
+                  actions: [
+                    TextButton(onPressed: () {}, child: const Text("Yes")),
+                    TextButton(onPressed: () {}, child: const Text("No")),
+                  ],
+                  );
                 }); 
               }, icon: const Icon(Icons.delete, color: Colors.white,)),
               title: Text(cartItem['title'].toString(), style: const TextStyle(fontFamily: "Lato", fontWeight: FontWeight.bold),),
