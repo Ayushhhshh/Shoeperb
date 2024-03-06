@@ -1,6 +1,5 @@
 import 'package:e_commerce/provider/cart_provider.dart';
 import 'package:e_commerce/pages/home_page.dart';
-import 'package:e_commerce/test.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
             hintStyle: TextStyle(fontFamily: 'Lato', fontWeight: FontWeight.w700,fontSize: 16)
           )
         ),
-        home:const Test()
+        home:const HomePage()
          ),
     );
   }
