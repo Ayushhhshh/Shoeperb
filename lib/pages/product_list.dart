@@ -113,7 +113,7 @@ class _MyWidgetState extends State<ProductList> {
                 }, 
                 )
                 : GridView.builder(
-                itemCount: products.length ,gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4), itemBuilder: (context,index){
+                itemCount: products.length ,gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 2), itemBuilder: (context,index){
                   final product = products[index];
                 return GestureDetector(
                   onTap: (){
