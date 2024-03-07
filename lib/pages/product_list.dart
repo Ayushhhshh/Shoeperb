@@ -90,7 +90,7 @@ class _MyWidgetState extends State<ProductList> {
             ),
              
             Expanded(
-              child: size.width < 650 ? ListView.builder(
+              child: size.width < 1200 ? ListView.builder(
                 itemCount: products.length,
                 itemBuilder: (context,index){
                   final product = products[index];
