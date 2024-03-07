@@ -38,6 +38,7 @@ void ontap() {
 
   @override
   Widget build(BuildContext context) {
+    final sizes = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
@@ -51,7 +52,6 @@ void ontap() {
       ),
       backgroundColor: Colors.white70,
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             widget.product['title'] as String,
@@ -70,11 +70,13 @@ void ontap() {
           ),
           Container(
               height: 250,
-              width: 1000,
-              decoration: BoxDecoration(
+              width: double.infinity,
+              decoration: sizes.width < 650 ? BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
+                  color: Colors.brown): BoxDecoration(
+                  borderRadius: BorderRadius.circular(0),
                   color: Colors.brown),
-              child: Column(
+              child:Column(
                 children: [
                   const SizedBox(
                     height: 36,
@@ -135,7 +137,7 @@ void ontap() {
                                 TextStyle(fontSize: 20, color: Colors.white))),
                   )
                 ],
-              )),
+                             )),
         ],
       ),
     );
