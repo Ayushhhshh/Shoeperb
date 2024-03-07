@@ -24,7 +24,7 @@ class _MyWidgetState extends State<ProductList> {
 
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.of(context).size; 
     const border = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.grey,),
       borderRadius: BorderRadius.horizontal(left: Radius.circular(50),
@@ -53,7 +53,7 @@ class _MyWidgetState extends State<ProductList> {
                     hintStyle: TextStyle(color: Colors.grey),
                     prefixIcon: Icon(Icons.search, color: Colors.white70,),
                     border: border,
-                    focusedBorder: border 
+                    focusedBorder: border  
                   ),
                 ),
               ),
@@ -88,8 +88,31 @@ class _MyWidgetState extends State<ProductList> {
                 },
               ),
             ),
+             
             Expanded(
-              child: GridView.builder(
+              child: size.width < 650 ? ListView.builder(
+                itemCount: products.length,
+                itemBuilder: (context,index){
+                  final product = products[index];
+                  return  GestureDetector(
+                    onTap: () {
+                    Duration duration = const Duration(milliseconds: 100);
+                    Future.delayed(duration, () {
+                      Navigator.of(context)
+                          .push(MaterialPageRoute(builder: (context) {
+                        return ProductDetail(product: product);
+                      }));
+                    });
+                  },
+                    child: ProductCard(
+                      title: product['title'] as String,
+                       price: product['price'] as double,
+                       image: product['imageUrl'] as String,
+                       ),
+                  );
+                }, 
+                )
+                : GridView.builder(
                 itemCount: products.length ,gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4), itemBuilder: (context,index){
                   final product = products[index];
                 return GestureDetector(
@@ -105,31 +128,7 @@ class _MyWidgetState extends State<ProductList> {
                        ),
                 );
               }),
-            ),
-            // Expanded(
-            //   child: ListView.builder(
-            //     itemCount: products.length,
-            //     itemBuilder: (context,index){
-            //       final product = products[index];
-            //       return  GestureDetector(
-            //         onTap: () {
-            //         Duration duration = const Duration(milliseconds: 100);
-            //         Future.delayed(duration, () {
-            //           Navigator.of(context)
-            //               .push(MaterialPageRoute(builder: (context) {
-            //             return ProductDetail(product: product);
-            //           }));
-            //         });
-            //       },
-            //         child: ProductCard(
-            //           title: product['title'] as String,
-            //            price: product['price'] as double,
-            //            image: product['imageUrl'] as String,
-            //            ),
-            //       );
-            //     }, 
-            //     ),
-            // )
+            )
             ],
         ),
       );
