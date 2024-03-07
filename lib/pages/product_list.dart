@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:e_commerce/widgets/products_cards.dart';
 import 'package:e_commerce/pages/product_details_page.dart';
 import 'package:e_commerce/utils/global_var.dart';
+import 'package:flutter/widgets.dart';
 
 
 class ProductList extends StatefulWidget {
@@ -23,6 +24,7 @@ class _MyWidgetState extends State<ProductList> {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     const border = OutlineInputBorder(
       borderSide: BorderSide(color: Colors.grey,),
       borderRadius: BorderRadius.horizontal(left: Radius.circular(50),
@@ -87,30 +89,48 @@ class _MyWidgetState extends State<ProductList> {
               ),
             ),
             Expanded(
-              child: ListView.builder(
-                itemCount: products.length,
-                itemBuilder: (context,index){
+              child: GridView.builder(
+                itemCount: products.length ,gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4), itemBuilder: (context,index){
                   final product = products[index];
-                  return  GestureDetector(
-                    onTap: () {
-                    Duration duration = const Duration(milliseconds: 100);
-                    Future.delayed(duration, () {
-                      Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) {
-                        return ProductDetail(product: product);
-                      }));
-                    });
+                return GestureDetector(
+                  onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                      return ProductDetail(product: product);
+                    }));
                   },
-                    child: ProductCard(
+                  child: ProductCard(
                       title: product['title'] as String,
                        price: product['price'] as double,
                        image: product['imageUrl'] as String,
                        ),
-                  );
-                }, 
-                ),
+                );
+              }),
             ),
-          ],
+            // Expanded(
+            //   child: ListView.builder(
+            //     itemCount: products.length,
+            //     itemBuilder: (context,index){
+            //       final product = products[index];
+            //       return  GestureDetector(
+            //         onTap: () {
+            //         Duration duration = const Duration(milliseconds: 100);
+            //         Future.delayed(duration, () {
+            //           Navigator.of(context)
+            //               .push(MaterialPageRoute(builder: (context) {
+            //             return ProductDetail(product: product);
+            //           }));
+            //         });
+            //       },
+            //         child: ProductCard(
+            //           title: product['title'] as String,
+            //            price: product['price'] as double,
+            //            image: product['imageUrl'] as String,
+            //            ),
+            //       );
+            //     }, 
+            //     ),
+            // )
+            ],
         ),
       );
   }
