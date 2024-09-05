@@ -9,7 +9,6 @@ class ProductCard extends StatelessWidget {
     required this.title,
     required this.price,
     required this.image}
-
     );
 
   @override
